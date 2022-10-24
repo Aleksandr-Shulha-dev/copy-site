@@ -1,0 +1,32 @@
+.step {
+  font-size: 1.6rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+
+  @media (max-width: 1100px) {
+    font-size: 1.4rem;
+  }
+
+  &--dashed {
+    background-color: var(--blue200);
+  }
+
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &--dashed {
+      background: url('../../assets/images/dash.png') 50% 45% repeat-x;
+    }
+  }
+
+  & > span {
+    color: var(--red);
+  }
+}

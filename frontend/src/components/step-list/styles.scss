@@ -1,0 +1,57 @@
+.steps {
+  width: 1140px;
+  display: flex;
+  justify-content: space-around;
+  background: url('../../assets//images/step-arrows.png') 50% 35px no-repeat;
+  margin-top: 55px;
+  margin-bottom: 55px;
+
+  @media (max-width: 1100px) {
+    width: 800px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-image: none;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @media (max-width: 1100px) {
+      width: 200px;
+    }
+
+    @media (max-width: 900px) {
+      width: 150px;
+    }
+  }
+
+  &__text {
+    margin-left: 30px;
+    width: 215px;
+    color: var(--gray400);
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-medium);
+
+    @media (max-width: 1100px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      width: auto;
+    }
+
+    &--active {
+      color: var(--blue100);
+    }
+  }
+}

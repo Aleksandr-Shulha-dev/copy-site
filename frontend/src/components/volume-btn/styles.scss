@@ -1,0 +1,50 @@
+@keyframes pulseVolume {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.volume {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  background: rgba(#000000, .7);
+  left: calc(50% - 80px);
+  top: calc(50% - 80px);
+  cursor: pointer;
+  animation: 0.5s linear 1s infinite alternate pulseVolume;
+
+  @media (max-width: 600px) {
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+  }
+
+  &__icon {
+    font-size: 4rem;
+
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__text {
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+
+    @media (max-width: 600px) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}

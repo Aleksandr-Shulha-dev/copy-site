@@ -1,0 +1,19 @@
+.video {
+  width: 100%;
+
+  &-wrapper {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &-wrapper-min {
+    position: relative;
+    max-width: 780px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

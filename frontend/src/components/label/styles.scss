@@ -1,0 +1,84 @@
+.label {
+  display: flex;
+  width: 150px;
+  position: fixed;
+  bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+
+  &.primary-class {
+    left: 35px;
+    bottom: 100px;
+
+    & .label__count {
+      left: -30px;
+    }
+
+    & .label__text {
+      margin-right: 0;
+      margin-left: 35px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+  }
+
+  &__count {
+    position: absolute;
+    width: 60px;
+    height: 68px;
+    font-size: 1.4rem;
+    top: calc(50% - 34px);
+
+    & > span {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.left {
+  left: 35px;
+  border: 2px dashed var(--blue100);
+
+  & > .label__count {
+    left: -30px;
+    color: var(--blue100);
+    background-image: url('../../assets/images/pin-online.png');
+  }
+
+  & > .label__text {
+    margin-left: 35px;
+
+    & > span {
+      color: var(--blue100);
+    }
+  }
+}
+
+.right {
+  right: 35px;
+  border: 2px dashed var(--green100);
+
+  & > .label__count {
+    right: -30px;
+    color: var(--green100);
+    background-image: url('../../assets/images/pin-slots.png');
+  }
+
+  & > .label__text {
+    margin-right: 35px;
+
+    & > span {
+      color: var(--green100);
+    }
+  }
+}

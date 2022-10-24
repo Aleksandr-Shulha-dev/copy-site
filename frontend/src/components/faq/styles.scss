@@ -1,0 +1,108 @@
+.faq {
+  width: 100%;
+  background: url('../../assets/images/checkbook.png') 0 50% no-repeat ;
+
+  @media (max-width: 1450px) {
+    background: none;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (max-width: 1100px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__list {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 900px) {
+      max-width: 600px;
+      width: 80%;
+    }
+
+    @media (max-width: 600px) {
+      margin-left: 40px;
+    }
+  }
+
+  &__item {
+    &:nth-child(1) > .faq__question::before {
+      background: url('../../assets/images/faq-basic.png');
+    }
+
+    &:nth-child(2) > .faq__question::before {
+      background: url('../../assets/images/faq-money.png');
+    }
+
+    &:nth-child(3) > .faq__question::before {
+      background: url('../../assets/images/faq-safe.png');
+    }
+
+    &:nth-child(4) > .faq__question::before {
+      background: url('../../assets/images/faq-gears.png');
+    }
+
+    &:nth-child(5) > .faq__question::before {
+      background: url('../../assets/images/faq-cards.png');
+    }
+  }
+
+  &__question {
+    position: relative;
+    display: inline-block;
+    color: var(--green300);
+    font-weight: var(--font-weight-medium);
+    font-size: 1.25rem;
+    border-bottom: 1px dashed var(--green300);
+    margin-bottom: 20px;
+
+    @media (max-width: 900px) {
+      font-size: 1rem;
+    }
+
+    &::before {
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      content: '';
+      top: calc(50% - 15px);
+      left: -45px;
+    }
+
+    &:nth-child(1)::before {
+      background: url('../../assets/images/faq-basic.png');
+    }
+
+    &:nth-child(2)::before {
+      background: url('../../assets/images/faq-money.png');
+    }
+
+    &:nth-child(3)::before {
+      background: url('../../assets/images/faq-safe.png');
+    }
+
+    &:nth-child(4)::before {
+      background: url('../../assets/images/faq-gears.png');
+    }
+
+    &:nth-child(5)::before {
+      background: url('../../assets/images/faq-cards.png');
+    }
+  }
+
+  &__answer {
+    display: inline-block;
+    margin-bottom: 30px;
+
+    @media (max-width: 900px) {
+      font-size: 0.9rem;
+    }
+  }
+}
