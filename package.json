@@ -1,0 +1,15 @@
+{
+  "name": "copy-site",
+  "version": "1.0.0",
+  "description": "## Installation  - Run ```npm run install:all```",
+  "main": "index.js",
+  "scripts": {
+    "start:frontend": "cd frontend && npm run start",
+    "start:backend": "cd backend && npm run dev",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "install:all": "npm run install:frontend && npm run install:backend"
+  },
+  "author": "",
+  "license": "ISC"
+}
