@@ -14,13 +14,11 @@ const Select: FC<SelectProps> = ({ onChange }) => {
   const { userApi } = useAppSelector((state) => state)
   const [isOpenSelect, setIsOpenSelect] = useState(false);
   const selected = selectOptionsData.find(({ number }) => {
-    console.log(userApi.tel.slice(1).startsWith(number));
     return userApi.tel.slice(1).startsWith(number)
   });
 
   const handleClick = () => {
     setIsOpenSelect((state) => !state);
-    console.log(isOpenSelect)
   }
 
   const handleOptionClick = (e: React.MouseEvent<HTMLLabelElement>) => {
